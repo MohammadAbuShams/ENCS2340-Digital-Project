@@ -1,0 +1,17 @@
+module bcd3( A,B,C0,S,Cout);
+  input [3:0] A;
+  input [3:0] B;
+  input C0;
+  output [3:0]S;
+  output Cout;
+  wire [3:0] Z;
+  wire [3:0] x,D;
+  wire T,w1,w2,w3;
+  xor (x,A,c0);
+  FBBA(x, B, CIN, Z, k);
+  and(w1,Z[3],Z[2]);
+  and(w2,Z[3],Z[1]);
+  or(Cout,k,w1,w2);
+  assign S = {1'b0,Cout,Cout,1'b0};
+  FBBA(Z,D,0S,w3);
+endmodule

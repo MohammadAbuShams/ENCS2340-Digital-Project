@@ -1,0 +1,11 @@
+// Mohammad Abu Shams.
+// Mux 2*1.
+ module Mux(input0, input1, selection, muxOutput);
+input input0, input1, selection;
+output muxOutput;
+reg muxOutput;
+always @ (input0 or input1 or selection)
+       if (selection ==0)
+       muxOutput = input0;
+       else muxOutput = input1;
+endmodule 
